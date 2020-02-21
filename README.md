@@ -7,7 +7,8 @@ This document will make you understand the technical flow of Bramble and how the
 
 ## Vision
 
-To make cryptocurrency accessible and usable to every person on the planet.
+To increase engagement & revenue of an app or game by
+rewarding users with Bramble
 
 ## Objectives and Goals
 
