@@ -34,5 +34,5 @@ contract BrambleContract is usingProvable {
     
     ------------
     ------------
-	}
+}
 ```
