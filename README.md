@@ -3,7 +3,7 @@ Programmable Crypto Rewards API for Apps & Games
 
 ## What is this document about?
 
-This document will make you understand the technical flow of Bramble and how the Bramble API will be integratdd with different platforms
+This document will make you understand the technical flow of Bramble and how the Bramble API will work.
 
 ### Bramble Flow
 
