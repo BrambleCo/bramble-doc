@@ -5,14 +5,32 @@ Programmable Crypto Rewards API for Apps & Games
 
 This document will make you understand the technical flow of Bramble and how the Bramble API will work.
 
+## Vision
+
+To make cryptocurrency accessible and usable to every person on the planet.
+
+## Objectives and Goals
+
+### User Interaction Design
+
+The current implementation of Blockchain is not meant for regular/novice users. Added steps to ensure privacy, decentralization while maintaining the usability aspect of the app has further made things complex. We can't imagine a non-tech person using the current iteration of blockchain implementation. So, What to do now?
+
+#### Progressive Decentralization
+
+We believe for a product to have majority adoption across the world, it must be easy to use while providing ten times the value of the incumbents. At the earliest iteration. Focusing more on user interface i.e. making it easy for non-tech users to access cryptocurrency, abstracting the core-tech of blockchain while keeping things less decentralized to get a product-market fit. This ensures that users can use the app without the knowledge of private keys, public keys, gas charges etc.
+````
+Less decentralization = Less friction = Better usability & Scalability
+````
+When we achieve a sufficient product market fit then, we can move on to Phase-2 of progressive decentralization by making the processes more open and transparent to users while retaining the ease-of-usability aspect of the app. Thus, making the app more decentralized.
+
 ### Bramble Flow
 
 #### Game Developer's Flow
-A player scores a reward, in background he redeems the brambles. If in game server he gets a daily quest completion / achievement completion, it will report this information to his bramble wallet via the game server. So he will not need to redeem every bramble, he will get that automatically once he links the bramble wallet to in-game account. So the game would just make push notifications to the wallet and not request any info. If he wants to see the wallet, he would need to login manually or from in-game link to bramble wallet. After a quest completion the game will send something as simple as 
+A player scores a reward, in background he redeems the brambles. If in game server he gets a daily quest completion / achievement completion, it will report this information to his bramble wallet (An custodial wallet based standalone app with user's profile, tracking the transaction happening across the api network.) via the game server. So he will not need to redeem every bramble, he will get that automatically once he links the bramble wallet to in-game account. So the game would just make push notifications (Just like how Google Play XP rewards work) to the wallet and not request any info. If he wants to see the wallet, he would need to login manually or from in-game link to bramble wallet. After a quest completion the game will send something as simple as 
 ````
 { user: 'user_id', reward: 'crossing_100_pipes'} 
 ````
-and then the Bramble API will manage the data. If there are too easy and frequent gained rewards then the algorithm would decrease the reward. If the reward would be gained very rare, the algorithm would increase its value. The wallet will be linked to the game via Oauth 2.0 authorization. User would click on the in-game link to Bramble Wallet. 
+and then the Bramble API will manage the data. If there are too easy and frequent gained rewards then the algorithm would decrease the reward. If the reward would be gained very rare, the algorithm would increase its value. The wallet will be linked to the game via Oauth 2.0 authorization. User would click on the in-game link to Bramble Wallet. The algorithm works on numerous parameters to mint tokens which users will be rewarded in, eventually.
 
 ````
 for example: bramblewallet.com/link_account/flappybird?user=user_id&token=some_random_token
@@ -26,7 +44,7 @@ So this would be an easy integration from the developer's side. The game develop
 
 
 #### Bramble's Backend Flow
-After the Reward data is received from the game, the Bramble API will calculate the reward that is to be given to the user and call the Smart contract wherein the Bramble Cryptocurrency ( Ethereum blockchain ) is located. The Smart Contract will have a code ( Provable / Chainlink) to connect with the Bramble API. This whole process flow will be automated.
+After the Reward data is received from the game, the Bramble API's algorithm will calculate the reward that is to be given to the user and call the Smart contract wherein the Bramble Cryptocurrency ( Ethereum blockchain ) is located. The Smart Contract will have a code ( Provable / Chainlink) to connect with the Bramble API. This whole process flow will be automated.
 
 ```
 contract BrambleContract is usingProvable {
