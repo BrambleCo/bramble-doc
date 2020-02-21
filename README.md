@@ -31,7 +31,8 @@ contract BrambleContract is usingProvable {
     function rewardPayout() payable { 
            provable_query(60, "URL", "json(https://api.bramble.co.in/verify_reward/user_id?).reward");
         }
-    }
+    
     ------------
-    --------
+    ------------
+	}
 ```
