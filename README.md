@@ -17,7 +17,7 @@ and then the Bramble API will manage the data. If there are too easy and frequen
 ````
 for example: bramblewallet.com/link_account/flappybird?user=user_id&token=some_random_token
 ````
-Bramble OAuth API will generate some wallet_token and send me to game developer's backend to
+Bramble OAuth API will generate some wallet_token and send to game developer's backend to
 ````
 flappybird.com/bramble_link?user=user_id&token=some_random_token&wallet_token=your_wallet_token
 ````
