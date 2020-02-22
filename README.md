@@ -7,10 +7,11 @@ This document will make you understand the technical flow of Bramble and how the
 
 ## Vision
 
-To increase engagement & revenue of an app or game by
-rewarding users with Bramble
+To make cryptocurrency accessible and usable to every person on the planet.
 
 ## Objectives and Goals
+
+To Increase engagement & revenue of an app or game by rewarding users in native cryptocurrency
 
 ### User Interaction Design
 
@@ -18,16 +19,26 @@ The current implementation of Blockchain is not meant for regular/novice users. 
 
 #### Progressive Decentralization
 
-We believe for a product to have majority adoption across the world, it must be easy to use while providing ten times the value of the incumbents. At the earliest iteration. Focusing more on user interface i.e. making it easy for non-tech users to access cryptocurrency, abstracting the core-tech of blockchain while keeping things less decentralized to get a product-market fit. This ensures that users can use the app without the knowledge of private keys, public keys, gas charges etc.
+We believe for a product to have majority adoption across the world, it must be easy to use while providing ten times the value of the incumbents. At our earliest iteration. Focusing more on user interface i.e. making it easy for non-tech users to access cryptocurrency, abstracting the core-tech of blockchain while keeping things less decentralized to get a product-market fit. This ensures that users can use the app without the knowledge of private keys, public keys, gas charges etc.
 ````
 Less decentralization = Less friction = Better usability & Scalability
 ````
-When we achieve a sufficient product market fit then, we can move on to Phase-2 of progressive decentralization by making the processes more open and transparent to users while retaining the ease-of-usability aspect of the app. Thus, making the app more decentralized.
+When we achieve a sufficient product market fit then, we can move on to Phase-2 of progressive decentralization by making the processes more open and transparent to users, adding scalability mechanisms of Layer-2 or ETH 2.0, while retaining the ease-of-usability aspect of the app. Thus, making the app more decentralized.
+
+Learn more about progressive decentralization [HERE](https://a16z.com/2020/01/09/progressive-decentralization-crypto-product-management/)
+
+#### Terms**
+**1. Bramble's Wallet** - A custodial wallet based standalone app with user's profile, tracking the transaction happening across the api network. User's can sign in with their email ID and password like any regular sign-in/sign-up flow. Private keys will be stored in a secure server vault (For e.g. Coinbase, Binance).
+
+**2. Push notification and Data transfer** - Just like how Google Play Standalone app automatically connect the game and rewards users in XP (experience points). Learn more about it [here](https://developers.google.com/games/services/management). 
+
+**3. Gas Charges Abstraction** - Bramble will pay the gas charges on behalf of users thus, abstracting the complexities around blockchain transaction. Learn more about it [HERE](https://medium.com/zastrin/how-to-save-your-ethereum-dapp-users-from-paying-gas-for-transactions-abd72f15e14d)
 
 ### Bramble Flow
 
 #### Game Developer's Flow
-A player scores a reward, in background he redeems the brambles. If in game server he gets a daily quest completion / achievement completion, it will report this information to his bramble wallet (An custodial wallet based standalone app with user's profile, tracking the transaction happening across the api network.) via the game server. So he will not need to redeem every bramble, he will get that automatically once he links the bramble wallet to in-game account. So the game would just make push notifications (Just like how Google Play XP rewards work) to the wallet and not request any info. If he wants to see the wallet, he would need to login manually or from in-game link to bramble wallet. After a quest completion the game will send something as simple as 
+
+A player scores a reward, in background he redeems the brambles. If in game server he gets a daily quest completion / achievement completion, it will report this information to his bramble wallet via the game server. So he will not need to redeem every bramble, he will get that automatically once he links the bramble wallet to in-game account. So the game would just make push notifications to the wallet and not request any info. If he wants to see the wallet, he would need to login manually or from in-game link to bramble wallet. After a quest completion the game will send something as simple as 
 ````
 { user: 'user_id', reward: 'crossing_100_pipes'} 
 ````
